@@ -72,5 +72,21 @@
                 <email>batfai.greta@gmail.com</email>               
             </address>
         </affiliation>               
-    </author>  
+    </author>
+    <author>
+        <personname>       
+            <surname>Boda</surname>
+            <firstname>Zsolt</firstname>        
+        </personname>    
+        <affiliation>
+            <shortaffil>tanuló</shortaffil>
+            <jobtitle>tanuló</jobtitle>
+            <orgname>Debreceni Egyetem Informatika Kar</orgname>
+            <orgdiv>4/c</orgdiv>
+            <address>
+                <email>Boda.Zsolt@outlook.com</email>               
+            </address>
+        </affiliation>               
+    </author>
+
 </authorgroup>
