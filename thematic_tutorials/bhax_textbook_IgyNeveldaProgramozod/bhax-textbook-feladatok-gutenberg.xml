@@ -15,6 +15,35 @@
         <para>         
             <citation>PICI</citation>       
         </para>
+        <para><command>Juhász István: Magas szintű programozási nyelvek I. </command></para>
+         <para><command>1.2 Alapfogalmak </command></para>
+        <para>
+            Ebben a fejezetben megismerkedhetünk a programozáshoz szükséges alapfogalmakkal, alapeszközökkel. Olvashatunk arról, hogyan készülhet a forrásszövegből kétféle módon gépi nyelvű kód, amit a processzor végre tud hajtani. Az egyik módszer a fordítóprogramos, mely során a fordító a forráskód alapján egy tárgyprogramot készít. Ennek folyamata során különböző elemzések hajtódnak végre(lexikális, szintaktikai, szemantikai). Az interpreteres módszer esetében nem készül tárgyprogram, hanem közvetlenül a forráskód utasításai hajtódnak végre. Bizonyos programnyelvek a két módszert egyszerre is alkalmazzák. 
+        </para>
+        <para>
+            Továbbá megismerkedhetünk a programonyelvek 3 osztályával:  imperatív, deklaratív, egyéb nyelvek. Imperatív nyelvek esetén algoritmusokat írunk, melyek a processzort működstetik. Fontos jellemző, hogy a változók többször is kaphatnak értéket a program során és ezek a tár közvetlen elérését biztosítják. Ebbe a csoportba tartoznak az objektumorientált és az eljárásorientált nyelvek.
+            A deklaratív nyelvek ettől eltérőek: nem algoritmikusak, tehát utasításokból állnak. A változók csak egyszer kaphatnak értéket a program futása során, illetve móriaműveletekere általában nincs lehetőség. Az előző csoporttal ellentétben a deklaratív nyelvek nem kötődnek szorosan a Neumann-architektúrához.
+        </para>
+        <para>
+            Minden programnyelvhez tartoznak szintaktikai és szemantikai szabályok, melyek a hivatkozási nyelvben vannak definiálva. A könyvben az implementációk kapcsán említésre kerül a hordozhatóság problémája, melyet a mai napig sem sikerült tökéletesen megoldani. Ez főleg régebbi időkben jelentett nagyobb problémát: a nyelvek nem voltak megfelelően szabványosítva, így bizonyos programok nem futottak le különböző gépeken. 
+        </para>
+        <para><command>2. Alapelemek </command></para>
+        <para>
+            Ez a fejezet részletesen foglalkozik a karakterkészletekkel, melyek alapvető építőelemei a forráskódnak. Ez a készlet minden programozási nyelvnél eltérő, viszont számjegyek esetén egységes elvet követnek. Egyéb alapfogalmakat is részletez a könyv, pl: kulcsszó, standard azonosító, címke, literálok.  
+        </para>
+         <para>
+            A forrásszöveg készítésénél bizonyos szabályokra oda kell figyelnünk, például, hogy milyen szerepe van a sortörésnek. Eszerint két csoportba oszthatjuk a nyelveket. A kötött formátumú nyelvek esetén soronként egy utasítás jelenhet meg, szabad formátumú nyelvek esetén pedig egy sorban bármennyi utasítás állhat. Ebben az esetben az utastásokat pontosvesszővel zárjuk.
+        </para>
+        <para><command>3. Kifejezések </command></para>
+        <para>
+            Kifejezés alatt egy olyan szintaktikai eszközt értünk, mely egy ismert értéknek egy új értéket állít elő. Alkotóelemei az operandusok, operátorok és a kerek zárójelek. Az operátorok hajtják végre a műveleteket. Aszerint, hogy hány operandussal végzik ezt, 3 csoportba oszthatjuk őket: unáris, bináris és ternáris operátorok. Bináris operátorok esetén beszélhetünk prefix, infix és postfix alakról aszerint, hogy hol helyezkedik el az operátor az operandusokhoz viszonytíva(elöl, közöttük, mögöttük). A végeredmény meghatározásának folyamatát a kifejezés kiértékelésének nevezzük. A fejezet a továbbiakban a C nyelvben használt kifejezéseket részletezi.
+        </para>
+        <para><command>4. Utasítások </command></para>
+        <para>
+            Az utasítások az algoritmusok fontos egységei, melyek segítségével készül a tárgyprogram. Beszélhetünk deklarációs és végrehajtó utasításokról. Az előbbi a fordítóprogrammal áll közvetlen kapcsolatban, nem kerülnek lefordításra és nem áll mögöttük tárgykód. Az végrehajtó utasításokból pedig a fordítóprogram készíti elő a tárgykódot. A fejezet a továbbiakban az elágaztató és ciklusszervező utasításokat, valamint ezek különböző típusait taglalja példákkal illusztrálva, több nyelvben.
+        </para>
+    </section> 
+
     </section>        
     <section>
         <title>Programozás bevezetés</title>
@@ -23,7 +52,45 @@
         </para>
         <para>
             Megoldás videó: <link xlink:href="https://youtu.be/zmfT9miB-jY">https://youtu.be/zmfT9miB-jY</link>
-        </para>        
+        </para> 
+        <para><command>1. Alapismeretek</command></para>
+        <para>
+            Az első fejezetben olvashatjuk a könyv rövid ismertetését, illetve az alapismeretek bemutatását. A könyv bizonyos szintű előismeretet feltételez az olvasótól, így viszonylag lényegretörően és tömören fogalmaz. Itt olvashatunk többek között az értékadásról, ciklusokról, elágazásokról, tömbökről, függvényekről. A fogalmakat rövid programokon keresztül ismerteti. Gyakorlófeladatok biztostásával készteti az olvasót arra, hogy elsajátítsa az új ismereteket.
+        </para>
+        
+        <para><command>2. Típusok, operátorok és kifejezések</command></para>
+        <para>
+            Ebben a fejezetben olvashatunk a változókról, az azokra vonatkozó megkötésekről, adattípusokról, operátorokról, típuskonverziókról. Ezenkívül bemutatja a feltételes kifejezések használatát is, azaz hogy hogyan írhatunk feltételt az if elágazás használata nélül. A fejezet végén felhívja a figyelmet a kiértékelési sorrend határozatlanságára: ügyeljünk arra, hogy ne írjunk olyan programot, mely különböző gépeken különböző eredményt adhat!
+        </para>
+        
+        <para><command>3. Vezérlési szerkezetek </command></para>
+        <para>
+            Itt olvashatunk bizonyos alapvető szintaktikai szabályokról(zárójelek használata, pontosvessző), különböző utasításokról(switch, break, continue, goto), illetve a do-while, for és else-if részletes ismertetéséről. Ezek közül a continue utaítást használjuk legritkábban, ez egy ciklusban elhelyezve a következő iteráció megkezdését idézi elő. A break utasítással kiléphetünk a legbelső ciklusból, a goto-val pedig egy másik helyre ugorhatunk a programban. A könyv arra ösztönzi az olvasót, hogy a goto utasítás használatát lehetőleg mellőzze, minden program megírható nélküle is.
+        </para>
+        
+        <para><command>4. Függvények és programstruktúra </command></para>
+        <para>
+           Ez a fejezet a függvényeket helyezi középpontba. A függvények használatának számos előnye van: műveletek elrejtése, átláthatóság, módosítások megkönnyítése. Az elv az, hogy könnyebben tudunk kezelni több kisebb programot, mint egy nagyot. Továbbá, a korábban megírt függvényeket természetesen többször is felhasználhatjuk, ezáltal növelve a hatékonyságot és gyorsaságot. A könyv ismerteti az extern deklarációt, mely segítségével biztosítani tudjuk egy másik állományban lévő változó elérését. Fontos még megemlíteni a statikus változókat, melyek mindig a memóriában vannak.  Állandóak, tehát a függvényből kilépve is megőrzik értéküket, illetve nem jönnek létre és szűnnek meg minden egyes függvényhívás alkalmával. 
+        </para>
+        <para><command>5. Mutatók és tömbök </command></para>
+        <para>
+           A mutatók a C nyelv sajátosságának tekinthetőek. A kezdő programozóknak általában nehézségeket okoznak, viszont ha elsajátítjuk a használatát, tömörebb és hatékonyabb programokat tudunk írni. A mutató egy változó, mely egy másik változó címét tárolja, műveleteket is végezhetünk velük, inicializálhatóak is. A könyv ismerteti a mutatók használatát tömbök esetén is. Ilyenkor fontos, hogy több dologra is oda kell figyelnünk, például hogy ne végezzünk különböző tömböket megcímző mutatókkal műveleteket, mert ez valószínűleg néhány gépen nem fog működni.
+        </para>
+        <para><command>6. Struktúrák </command></para>
+        <para>
+          A struktúra egy vagy több, akár más-más típusó változók együttese, csoportja. Nagyobb programok esetén hasznosak lehetnek: növelik az átláthatóságot, kezelhetőséget. Nagyobb adatstruktúrák szervezésében nyújtanak nagy segítséget, lehetővé teszik, hogy több adatot egy egészként tudjunk kezelni. Más nyelveken, pl PASCAL-ban a rekord elnevezést kapták. A struktúra elemeit tagoknak nevezzük, ezeknek lehetnek megegyező elnevezései. Ha egy deklarált struktúrát nem töltünk fel változókkal, akkor az nem foglal tárhelyet a memóriába, csupán a szerkezetet, alakot adja meg. A struktúrákat egymásba ágyazhatjuk, viszont nem adhatjuk át függvényeknek, illetve függvény sem adhat vissza struktúrát. A könyv a bináris fa példáján keresztül szemléltet, ahol a rekurziós eljárás is említésre kerül. Ezenkívül ismerteti a mezők és unionok használatát.
+        </para>
+         <para><command>7. Bevitel és kivitel </command></para>
+        <para>
+          Ebben a fejezetben lényegretörő bemutatást kapunk a standard be-és kiviteli könyvtárról, melyre
+          <programlisting language="c"><![CDATA[#include <stdio.h> ]]></programlisting>
+              módon hivatkozhatunk. Részletezést kapunk a be-és kivitelről, hibakezelésről, de a rendszerhívásról és tárhelykezelésről is szót ejt a könyv.
+        </para>
+         <para><command>8. Csatlakozás a UNIX operációs rendszerhez </command></para>
+        <para>
+          A könyv itt is feltételez egy bizonyos szintű előismeretet, nem foglalkozik az UNIX rendszerek ismertetésével. Ez a fejezet leginkább példák bemutatásából áll és mélyebb betekintést ad a C programozásba.
+        </para>
+
     </section>        
     <section>
         <title>Programozás</title>
