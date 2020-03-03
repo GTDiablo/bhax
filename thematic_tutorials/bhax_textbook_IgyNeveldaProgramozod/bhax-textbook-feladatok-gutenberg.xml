@@ -97,6 +97,12 @@
         <para>                
             <citation>BMECPP</citation>
         </para>
+         <para><command>Benedek Zoltán, Levendovszky Tihamér: Szoftverfejlesztés C++ nyelven </command></para>
+         <para><command>2. A C++ nem objektumorientált újdonságai </command></para>
+        <para>
+            Ez a fejezet olyan alapvető tulajdonságait mutatja be a C++ nyelvnek, mely eltér az elődjétől, a C nyelvtől. C++ -ban bevezetésre került a <type>bool</type> típus, tehát a bool, true, false a nyelv kulcsszavai között szerepelnek. A main függvénynek argumentumos alakja is lehet, illetve a return használata nem szükséges. Újítások közé tartozik még, hogy függvény esetében az üres paraméterlista <type>void</type> típust jelent. Alapértelmezett visszatérési érték C-ben az <type>int</type>, a C++ azonban ilyet nem támogat.
+        </para>
+
     </section>
 <section>
         <title>Python bevezetés</title>
