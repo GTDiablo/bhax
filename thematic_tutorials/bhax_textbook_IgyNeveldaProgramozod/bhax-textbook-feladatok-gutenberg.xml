@@ -97,5 +97,118 @@
         <para>                
             <citation>BMECPP</citation>
         </para>
-    </section>        
+    </section>
+<section>
+        <title>Python bevezetés</title>
+        <para>                
+          Forrás
+         <link xlink:href="http://users.atw.hu/progmat/letoltesek/Bevezetes%20a%20molbiprogramozasba.pdf">http://users.atw.hu/progmat/letoltesek/Bevezetes%20a%20molbiprogramozasba.pdf</link>
+        </para>
+        <para>
+        	Általános információk
+        </para>
+        <para>
+   			A Python egy magas szintű, általános célú programozási nyelv. A szkriptnyelvek családjába szokták sorolni. Guido vn Rossum 1990-ben alkotta meg. Egyik legnagyobb erőssége a funckiógazdag standard könyvtára, jól bővíthető. 
+        </para>
+        <para>
+        	Python-futtatókörnyezet számtalan különféle rendszerre létezik, így több mobilplatformra is(Apple IPhone, Palm, Windows Phone).
+        </para>
+        <para>
+        	A nyelv népszerűségét nagymértékben az egyszerűségének köszönheti. Elsősorban kliensszoftverek, prototípusok készítésére alkalmas. 
+        </para>
+        <para>
+        	A Python nyelv jellemzői
+        </para>
+        <para>
+        	Amikor alkalmazásokat készítünk és szükség van egy olyan program rész megírására ami a probléma szemponjából irrelváns, elkészítése mégis sok időt venne igénybe akkor a Python egy nagyon hasznos opció. Nem kell fordítani, elég az értelmezőnek a Python forrást megadni és az automatikus futtatja is az adott alkalmazást. A Pythonra tekinthetünk valódi programozási nyelvként is, mivel sokkal többet kínál, mint az általános szkript nyelvek vagy batch file-ok.
+        </para>
+        <para>
+        	A Python tulajdonságai
+        </para>
+        <para>
+        	A Python nyelvhez szorosan kapcsolódó standard Python kódkönyvtár rengeteg újrahasznosítható modult tartalmaz ,amelyek meggyorsítják az alkalmazásfejlesztést. Ilyen modulok találhatóak például fájlkezelésrem hálózatkezelésre, különféle rendszerhívásokra és akár felhasználói felület kialakítására is. Illetve az internete is egyre több Python példakód és leírás található amely segít a nyelvelsajátításában.
+        	</para>
+        	<para>
+        	A Python egy köztes nyelv , nincs szükség fordításra se linkelésre, az értelmező interkaktían is használható. A Python segítségével tömörebb mégis olvashatóbb programokat készíthetünk amelyek rövidebbek(általában), mint a velük ekvivalens C,C++ vagy Java programok. Ennek okai a követketkezők:
+        	</para>
+        	<para>
+        	A magas szintű adattípusok lehetővé teszik ,hogy összetett kifejezéseket írjunk le egy rövid állításban.
+        </para>
+        <para>
+        	A kódcsoportosítás egyszerű tagolással (új sor, tabulátor) történik, nincs szükség nyitó és zárójelezésre.
+        </para>
+        <para>
+        	Nincs szükség változó vagy argumentumdefiniálására.
+        </para>
+        <para>
+        	A Python nyelv bemutása
+        </para>
+        <para>
+        	Alap vető szintaxis
+        </para>
+        <para>
+        		# A kód szerkesztése
+        	</para>
+        	<para>
+        	A Python nyelv legfőbb jellemzője , hogy behúzásalapu a szintaxisa. A programban szereplő állításokat az azonos szintű behúzásokkal tudjuk csoportba szervezni, nincs szükség kapcsos zárójelrevagy expilict kulcsszavakra. A sor végéig tart egy utasítás. Ha egy utasítás csak több sorban fér el ezt sor végére írt '\'-el kell jelezni.
+        </para>
+        <para>
+        	AZ értelmező minden sort tokenekre bont. A token különböző fajtái a következők: azonosító, kulcsszó, operátor, delimiter, literál. A kis és nagybetűket Pythonban megkülönböztetjük. A Pythonban vannak lefoglaltak kulcssszavak, azok megtekinkhetőek a forrásban.
+        	</para>
+        	<para>
+        		Típusok és változók
+        	</para>
+        	<para>
+        		# Típusok
+        	</para>
+        	<para>
+        		Pythonban minden adatot objektumok reprezentálnak. Az adatokon végezhető műveleteket az objektum típusa határozza meg. Nincs szükség változók típusának megadására, azt a rendszer automatikus "kitalálja". Adattípusok a következők lehetnek: számok, sztringek, ennesek, listák, szótárak. A Pythonban is van a NULL értéknek megfelelő típus, itt None a neve.
+        	</para>
+        	<para>
+        		# Változók és alkalmazásuk
+        	</para>
+        	<para>
+        		Pythonban a változók alatt az egyes objektumokra mutató referenciákat értünk. Maguknak a változóknak nincsenek típusai. A változó értékadása egyszerűen '=' jel segítségével történik. A Python nyelvben egyaránt létezenek globális és lokális változók. 
+        	</para>
+        	<para>
+        	 # A nyelve eszközei
+        	</para>
+        	<para>
+        		Például print metódus, amivel sztringet vagy más változót írhatunk ki a konzolra.</para>
+        		<para>
+        			A nyelv támogatja a más nyelvekben megszokott if elágazást if/elif/else kulcsszavakkal.
+        		</para>
+        		<para>
+        			Természetesen támogatja a különféle ciklusok kezelését is, mint a for ciklus, while ciklus. Illetve támogatja a C-ben megismert break és continue kulcsszavakat is.
+        		</para>
+        		<para>
+        			Címkéket a label paranccsal helyezhetünk e a kód egyes részeiben , és ezekhez a goto paranccsal ugorhatunk. 
+        		</para>
+        		<para>
+        			Függvények
+        		</para>
+        		<para>
+        			Pythonban függvényeket a def kulcsszóval definiálhatunk. A függvények rendelkeznek paraméterekkel, amelyeknek a szokásos megkötésekkel és szintaxissal alapértelmezett értékeket is adhatunk. A függvényekenek egy visszatérési értékük van azonban visszatérhetnek például ennesekkel is. 
+        		</para>
+        		<para>
+        			Osztályok és objektumok
+        		</para>
+        		<para>
+        			A Python nyelv támogatja a klasszikus, objektum orientált eljárásokat. Definiálhatunk osztályokat, amelyek pédényai objektumok. Az osztályoknak lehetnek attribútumaik: objektumok, illetve függvények. Ez utóbbiakat metódusnak vagy tagfüggvénynek is hívjuk. Ezenkívül az osztályok örökölhetnek más osztályokvól is. Az osztályoknak lehet egy speciális, konstruktor tulajdonságú metódusa, az __init __.
+        		</para>
+        		<para>
+        			Modulok
+        		</para>
+        		<para>
+        			A Python a fejlesztés megkönnyítése érdekében sok szabványis modult tartalmaz. Például: appuifw, messaging,syinfo,camera,audio.
+        		</para>
+        		<para>
+        			Kivételkezelés
+        		</para>
+        		<para>
+        		A Python nyelv támogatja a váratlan helyzetek kezelésére az úgynevetett kivételeket. Ebben,egyszerű esetben a try kulcsszó után írva szerepel az a kódblokk, amelyben a kivételes helyzet előállhat, majd ezt az expect blokk követi , amelyre a hiba esetén kerül a vezérlés, illetve opcionálisan egy else ág. Az utóbbi kettőt kiválthatja egyetlen finally blokk.
+        		</para>
+
+    </section>
+
 </chapter>                
