@@ -11,14 +11,33 @@
             Állapotátmenet gráfjával megadva írd meg ezt a gépet!
         </para>
         <para>
-            Megoldás videó:
+            Megoldás videó: Készül
         </para>
         <para>
-            Megoldás forrása:                
+            Megoldás forrása:<link xlink:href="https://turingmachine.io/">https://turingmachine.io/</link>
+            Fájl forrása:  <link xlink:href="../../code/Chomsky/unaris.c">
+                <filename>code/Chomsky/unaris.c</filename>
+            </link>              
         </para>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            Az unáris számrendszer a természetes számok leírására alkalmas. Általában egyesekkel vagy pálcikákkal jelöljük a számokat, de bármilyen szimbólumot is bevezethetünk. A szimbólumot annyiszor írjuk le, amennyi az ábrázolandó számunk értéke.
         </para>
+        <programlisting language="c">
+        <![CDATA[
+        #include <stdio.h>
+
+int main(){
+    int x;
+    printf("Adjon meg egy értéket: ");
+    scanf("%d", &x);
+    for(int i=0; i<x; ++i)
+        printf("1");
+    printf("\n");
+    return 0;
+    
+}
+        ]]>
+        </programlisting>
     </section>        
         
     <section>
@@ -33,8 +52,41 @@
             Megoldás forrása:                
         </para>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            Chomsky 4 különböző osztályba csoportosította a grammatikákat (általános, környezetfüggő, környezetfüggetlen, reguláris). Ebben a feladatban környezetfüggő grammatikákkal foglalkozunk, ezeknek a helyetesítési szabályai xYz → xyz alakúak. </para> <para>
+            Ebben az esetben a levezetési szabályok mindkét oldalán szerepelhetnek terminális szimbólumok, melyeket konstansoknak nevezünk és kisbetűkkel jelöljük. 
+            A nem terminális szimbólumokat változóknak nevezzük és nagybetűkkel jelöljük.
+            Mindkét esetben a levezetést a kezdő szimbólummal (S) kezdjük. Ez egy kitüntetett, nem terminális elem.
+
         </para>
+
+        <programlisting language="c">
+        <![CDATA[
+                      S, X, Y változók
+              a, b, c konstansok
+        Szabályok:
+              S  -> abc 
+              S  -> aXbc
+              Xb -> bX
+              Xc -> Ybcc
+              bY -> Yb
+              aY -> aaX
+              aY -> aa
+        Levezetés:
+            S       (S → aXbc)
+            aXbc    (Xb → bX)
+            abXc    (Xc → Ybcc)
+            abYbcc  (bY → Yb)
+            aYbbcc  (aY -> aaX)
+            aaXbbcc (Xb → bX)
+            aabXbcc (Xb → bX)
+            aabbXcc (Xc → Ybcc)
+            aabbYbccc (bY → Yb)
+            aabYbbccc (bY → Yb)
+            aaYbbbccc (aY → aa)
+            aaabbbccc
+
+        ]]>
+        </programlisting>
     </section>        
                 
     <section>
@@ -45,14 +97,37 @@
             Majd mutass be olyan kódcsipeteket, amelyek adott szabvánnyal nem fordulnak (például C89), mással (például C99) igen.
         </para>
         <para>
-            Megoldás videó: 
+            Megoldás videó: Jön
         </para>
         <para>
             Megoldás forrása:  
         </para>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            Az alábbi programok C89 szabvánnyal nem fognak lefordulni. Az első esetben a for ciklusfejben történő deklaráció miatt, a második esetben pedig az egysoros komment miatt.
         </para>
+            <programlisting language="c"><![CDATA[
+#include <stdio.h>
+
+int main()
+{
+    for(int i=0; i<4; i++)
+    {
+        printf("Hello world!");
+    }
+}
+]]></programlisting>
+<programlisting language="c"><![CDATA[
+#include <stdio.h>
+
+int main()
+{
+    //int a = 89;
+}
+ ]]></programlisting>  
+
+    <para>
+    Az új szabvány létrejöttével számos újdonság jelent meg, például: változó méretű tömbök, új függvények, új adattípusok, új header állományok. Néhány dolgot a C++ -ból emeltek át. 
+    </para>
     </section>                     
 
     <section>
@@ -88,7 +163,10 @@ main ()
 }
 ]]></programlisting>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            A lexer gyakorlatilag egy szövegelemző program. Beolvas egy forráskódot és felismeri benne a tokeneket, melyek a program építőelemei.
+        </para>
+        <para>
+        A fenti program három fő részből áll, melyeket <command>%%</command> jelek választják el egymástól. Az első részben történnek a deklarációk. Megadjuk, hogy mit értünk számjegynek(0 és 9 közötti számokat). A második részben a valós számokat definiáljuk: bármennyi számjegy(lehet nulla is, ezt a <command>*</command> jelzi) + pont + bármennyi számjegy, de legalább egy(<command>+</command> jelzi). Ha a program talál egy számot, akkor növeli a realnumbers változó értékét eggyel, illetve kiírja a találatot. A program utolsó része már teljesen C nyelvben látható, ahol függvénymeghívást és a találatok számának kiírását láthatjuk. A program futásához szükséges a flex telepítése, majd fordításkor a -lfl kapcsoló használata.
         </para>
     </section>                     
 
@@ -201,7 +279,7 @@ main()
 }
 ]]></programlisting>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            Ez a program egy beolvasott szöveget karakterenként alakít át a l337d1c7 tömbben definiált módon. A struct-ban adjuk meg a karakterek lehetséges "titkosított" változatát. A program elején definiáljuk a tömb méretét, így nem szükséges azt előre megadni. Ezáltal könnyen hozzá tudunk írni a tömbhöz, kiegészíthetjük bármennyi tetszőleges elemmel anélkül, hogy a sorok megszámolásával és a méret átírásával foglalkoznánk. A program tehát karakterenként vizsgálja a szöveget. Ha az aktuális karaktert megtalálja a tömbben, akkor egy véletlenszerűen generált szám alapján(sorsolással) kiválaszt a megadott négy lehetséges karakter közül egyet. Ha az aktuálisan vizsgált karakter nem találja meg a tömbben, akkor pedig ugyanúgy, változatlanul kiírja. Az utolsó részben az srand() függvény a random szám generátort ( rand() ) inicializálja. A fordítás során a -lfl kapcsoló szükséges, ez a flex library-ra hivatkozik
         </para>
     </section>                     
 
@@ -259,16 +337,24 @@ main()
                 <programlisting><![CDATA[printf("%d %d", f(&a), a);]]></programlisting>            
             </listitem>
         </orderedlist>
+        <para>i. Ha a SIGINT jel nincs figyelmen kívül hagyva(ignorálva), akkor ezentúl a jelkezelő függvény kezelje azt. </para>
+        <para>ii. For ciklus legyen ötször végrehajtva. Nullától indítjuk, iterációnként eggyel inkrementáljuk i értékét. Az inkrementáció alakja preorder, a következő iterációnál i értéke i+1 lesz. A feltétel alapján i utolsó értéke 4 lesz, mivel ez az utolsó érték, amire teljesül a feltétel(ötnél kisebb).  </para>
+         <para>iii. Az előző példától annyiban különbözik, hogy az inkrementáció alakja postorder, de ez nem változtat az iterációk számán, ugyanúgy ötször fog lefutni a ciklus.   </para>
+         <para>iv. For ciklus, mely ötször fog lefutni. Ránézésre azt várjuk, hogy a tömb i-edik elemének helyére i+1-et ír, tehát az elemek sorra 1,2,3,4,5 lesznek. Azonban nem teljesen ez fog történni, az első(nulladik) elem változatlan marad, utána pedig az elemek sorra 1,2,3,4 lesznek. Ha a tömb első eleme eredetileg nem volt feltöltve értékkel, akkor random szám lesz a helyén. Ez hibának tekinthető, splint-tel futtatva "Parse Error" jelzést kapunk. </para>
+         <para>v. For ciklus, mely addig fut, amíg teljesül két feltétel: az egyik, hogy i értéke kisebb, mint n értéke. A másik feltételt vizsgáljuk meg részletesen. Először visszakapjuk d és s értékét, majd azokat a következő iterációban növeljük. S és d mutatók, tehát az inkrementálás itt azt jelzi, hogy a következő elemre mutatnak. A <command>*</command> dereferencia jelzés visszaadja azt az értéket, amire mutatnak. Ebben a zárójelben tehát ha tömbről beszélünk, akkor d értéknek helyébe azt az értéket írja, amire s mutat. Lényegében egy tömb(d) értékeit lecseréli a másik tömb(s) értékeire. Azonban ez csak akkor működne tökéletesen, ha n értéke pontosan megegyezne a két tömb méretével. Splint-tel futtatva szintén "Parse Error" jelzést kapunk. </para>
+    <para>vi. Standart kimenetre írunk. Kétszer hívjuk meg ugyanazt a függvényt, egyszer a-val és a+1-gyel, majd fordítva. Nem ajánlott egy zárójelen belül ilyet tenni, mivel nem azt fogjuk kapni amit első ránézésre gondolnánk. Ez a kódcsipet hibásnak tekinthető, annak ellenre, hogy le fog futni. Splint-tel futtatva ezt kapjuk(részlet): 
+         </para>
+         <para>vii. Szintén a standard kimenetre írunk, először f-et hívjuk meg a-val és a visszatért értéket írjuk ki, majd a eredeti értékét íratjuk ki. A értékén nem változtat a függvényhívás akkor se, ha a függvényben módosítjuk azt. </para>
+         <para>viii. A változó címét argumentumként átatjuk az f függvénynek és kiiratjuk amivel visszatér, majd kiírjuk a (eredeti) értékét is a standard kimenetre. </para>
+        
+
+
         <para>
             Megoldás forrása:  
         </para>
 
         <para>
-            Megoldás videó: 
-        </para>
-
-        <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            Megoldás videó: Jön
         </para>
 
     </section>                     
@@ -295,8 +381,18 @@ $(\exists y \forall x (y<x) \supset \neg (x \text{ prím}))$
         </para>
 
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            1. Minden számhoz(x) létezik egy nála nagyobb szám(y), ami prím. Azaz, a prímszámok száma végtelen.
         </para>
+        <para>
+        2. Minden x-hez létezik egy nála nagyobb y, hogy: y és y+2 is prímszám. Vagy: minden számnál(x) tudunk egy annál nagyobbat mondani(y), amire igaz hogy ő(y) és a kettővel nagyobb(y+2) értékű szám is prím. Azaz, az ikerprímek száma végtelen.
+        </para>
+        <para>
+        3. Létezik egy szám(y), ami minden másik prímszámnál(x) nagyobb. Tehát minden prímszámnál(x) létezik egy nagyobb szám(y), ami nem prím.
+        </para>
+        <para>
+        4. Ekvivalens átalakításokat végezve ugyanazt kapjuk, mint az első példában: minden számhoz(x) létezik egy nála nagyobb szám(y), ami prím. Azaz, a prímszámok száma végtelen. 
+        </para>
+        
     </section>                                                                                                                                                                            
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
     <section>
@@ -480,7 +576,7 @@ main ()
 }
 ]]></programlisting>            
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            A mutatók memóriacímet tárolnak. Ha egy változó elé <command>*</command> jelet írunk, akkor viszont a változó értékét kérdezzük le. Dereferenciával tudjuk egy változó memóriacímét lekérdezni.
         </para>
     </section>                     
 

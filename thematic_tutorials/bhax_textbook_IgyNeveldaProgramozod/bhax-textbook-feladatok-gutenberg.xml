@@ -43,8 +43,7 @@
             Az utasítások az algoritmusok fontos egységei, melyek segítségével készül a tárgyprogram. Beszélhetünk deklarációs és végrehajtó utasításokról. Az előbbi a fordítóprogrammal áll közvetlen kapcsolatban, nem kerülnek lefordításra és nem áll mögöttük tárgykód. Az végrehajtó utasításokból pedig a fordítóprogram készíti elő a tárgykódot. A fejezet a továbbiakban az elágaztató és ciklusszervező utasításokat, valamint ezek különböző típusait taglalja példákkal illusztrálva, több nyelvben.
         </para>
     </section> 
-
-    </section>        
+     
     <section>
         <title>Programozás bevezetés</title>
         <para>                
