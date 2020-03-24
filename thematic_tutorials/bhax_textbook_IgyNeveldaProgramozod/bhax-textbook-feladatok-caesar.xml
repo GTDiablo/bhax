@@ -86,7 +86,10 @@ main ()
             </mediaobject>
         </figure>                             
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            A feladat során egy háromszögmátrixnak foglalunk helyet. Emiatt soronként végignézzük, hogy van-e megfelelő hely az adott sornak és ha igen lefoglajuk. Majd az adott soron belül helyet foglalunk a megadott elemszámnak, ami soronként mindig eggyel több az első sorban egyről indulva. Ha ez megtörtént, akkor feltöltjük elemekkel a mátrixot. Erre több fajta lehetőségünk is van, melyre több lehetőséget is látunk a programkódban.
+        </para>
+        <para>
+            A felada elején az <literal>nr</literal> egész típusú változóban eltároljuk a sorok számát. Majd egy tm double típusú értékre mutatóra mutatót létrehozunk és ennek segítségével próbálunk helyet foglalni neki. Először megnézzük, hogy van-e elég szabad hely a sorok számának megfelelő doblra mutató mutatókak, azaz a <literal>tm*</literal>-nak, mivel ebben tároljuk a sorok kezdetének memóriacímét. Ezután megnézzük soronként, hogy van-e a háromszögmátrixban tárolt adatoknak elég hely, ami soronként mindig eggyel több double értéknek való helyfoglalást jelent. Amennyiben ezek a helyfoglalások valahol sikertelenek, akkor <literal>NULL</literal> értéket kapunk vissza. Ezután a háromszögmátrixot sorfolytonosan feltöltjük az 1, 2... értékekkel. Majd kiiratjuk a kapott mátrixot. Utána megnézünk többfajta feltöltési módot, aszerint, hogy hogy hivatkozhatjuk meg egy i-edk sor j-edik elemét, amennyiben mutatóra mutató mutatót használtunk. Utána ezt a mátrixot is töröljü végül pedig felszabadítjuk a helyet először soronként majd a teljes tárat.
         </para>            
     </section>        
     <section>
@@ -100,10 +103,59 @@ main ()
         <para>
             Megoldás forrása:                
         </para>
+        <programlisting language="c">
+        <![CDATA[
+        #include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <locale.h>
+#include <wchar.h>
+#include <stdlib.h>
+
+#define MAX_KULCS 100
+#define BUFFER_MERET 256
+
+
+int main (int argc, char **argv)
+{
+
+  char kulcs[MAX_KULCS];
+  char buffer[BUFFER_MERET];
+
+  int kulcs_index = 0;
+  int olvasott_bajtok = 0;
+
+  int kulcs_meret = strlen (argv[1]);
+  strncpy (kulcs, argv[1], MAX_KULCS);
+
+  while ((olvasott_bajtok = read (0, (void *) buffer, BUFFER_MERET)))
+    {
+
+      for (int i = 0; i < olvasott_bajtok; ++i)
+	{
+
+	  buffer[i] = buffer[i] ^ kulcs[kulcs_index];
+	  kulcs_index = (kulcs_index + 1) % kulcs_meret;
+
+	}
+
+      write (1, buffer, olvasott_bajtok);
+
+    }
+}
+
+        ]]>
+        </programlisting>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            A titkosítás során megadunk egy szót, ami alapján titkosítunk. Ezt a szót és a titkos szöveget bájtonként átírjuk. Az átírott szövegekre a kizáró vagy műveletet alkalmazzuk és visszaírjuk bitenként szöveggé. Ami miatt az így titkosított szöveg már csak egy bináris szemétnek tűnik. Ahányszor csak egymás után tudjuk írni a "jelszót" a szöveg hosszában annyiszor tesszük meg. Emellet fontos megemlíteni, hogy a beolvasás során egy úgynevezett buffert használunk, hogy ne terheljük túl a memóriát.
         </para>            
-    </section>        
+        <para>
+            Ha mégegyszer alkalmazzuk a már kódolt szövegre a titkosítást, akkor visszakapjuk az eredeti szöveget. 
+        </para>
+    </section>   
+
+
+
     <section>
         <title>Java EXOR titkosító</title>
         <para>
@@ -112,13 +164,65 @@ main ()
         <para>
             Megoldás videó:
         </para>
+        <programlisting language="java">
+        <![CDATA[
+        public class ExorTitkosító {
+    
+    public ExorTitkosító(String kulcsSzöveg,
+            java.io.InputStream bejövőCsatorna,
+            java.io.OutputStream kimenőCsatorna)
+            throws java.io.IOException {
+        
+        byte [] kulcs = kulcsSzöveg.getBytes();
+        byte [] buffer = new byte[256];
+        int kulcsIndex = 0;
+        int olvasottBájtok = 0;
+
+        while((olvasottBájtok =
+                bejövőCsatorna.read(buffer)) != -1) {
+            
+            for(int i=0; i<olvasottBájtok; ++i) {
+                
+                buffer[i] = (byte)(buffer[i] ^ kulcs[kulcsIndex]);
+                kulcsIndex = (kulcsIndex+1) % kulcs.length;
+                
+            }
+            
+            kimenőCsatorna.write(buffer, 0, olvasottBájtok);
+            
+        }
+        
+    }
+    
+    public static void main(String[] args) {
+        
+        try {
+            
+            new ExorTitkosító(args[0], System.in, System.out);
+            
+        } catch(java.io.IOException e) {
+            
+            e.printStackTrace();
+            
+        }
+        
+    }
+    
+}
+
+        ]]>
+        </programlisting>
         <para>
             Megoldás forrása: <link xlink:href="https://www.tankonyvtar.hu/hu/tartalom/tkt/javat-tanitok-javat/ch01.html#exor_titkosito">https://www.tankonyvtar.hu/hu/tartalom/tkt/javat-tanitok-javat/ch01.html#exor_titkosito</link>               
         </para>
         <para>
             Tanulságok, tapasztalatok, magyarázat...
         </para>            
-    </section>        
+    </section> 
+
+
+
+
     <section xml:id="bhax-textbook-feladatok-caesar.EXOR-toro">
         <title>C EXOR törő</title>
         <para>
@@ -130,10 +234,127 @@ main ()
         <para>
             Megoldás forrása:                
         </para>
+
+        <programlisting language="c">
+        <![CDATA[
+                	#define MAX_TITKOS 4096
+#define OLVASAS_BUFFER 256
+#define KULCS_MERET 5
+#define _GNU_SOURCE
+
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+
+
+double atlagos_szohossz (const char *titkos, int titkos_meret)
+{
+  int sz = 0;
+  for (int i = 0; i < titkos_meret; ++i)
+    if (titkos[i] == ' ')
+      ++sz;
+
+  return (double) titkos_meret / sz;
+}
+
+int tiszta_lehet (const char *titkos, int titkos_meret)
+{
+  // a tiszta szoveg valszeg tartalmazza a gyakori magyar szavakat
+  // illetve az átlagos szóhossz vizsgálatával csökkentjük a
+  // potenciális töréseket
+
+  double szohossz = atlagos_szohossz (titkos, titkos_meret);
+
+  return szohossz > 6.0 && szohossz < 9.0
+    && strcasestr (titkos, "hogy") && strcasestr (titkos, "nem")
+    && strcasestr (titkos, "az") && strcasestr (titkos, "ha");
+
+}
+
+void exor (const char kulcs[], int kulcs_meret, char titkos[], int titkos_meret)
+{
+
+  int kulcs_index = 0;
+
+  for (int i = 0; i < titkos_meret; ++i)
+    {
+
+      titkos[i] = titkos[i] ^ kulcs[kulcs_index];
+      kulcs_index = (kulcs_index + 1) % kulcs_meret;
+
+    }
+
+}
+
+int exor_tores (const char kulcs[], int kulcs_meret, char titkos[],
+	    int titkos_meret)
+{
+
+  exor (kulcs, kulcs_meret, titkos, titkos_meret);
+
+  return tiszta_lehet (titkos, titkos_meret);
+
+}
+
+int main (void)
+{
+
+  char kulcs[KULCS_MERET];
+  char titkos[MAX_TITKOS];
+  char *p = titkos;
+  int olvasott_bajtok;
+
+  // titkos fajt berantasa
+  while ((olvasott_bajtok =
+	  read (0, (void *) p,
+		(p - titkos + OLVASAS_BUFFER <
+		 MAX_TITKOS) ? OLVASAS_BUFFER : titkos + MAX_TITKOS - p)))
+    p += olvasott_bajtok;
+
+  // maradek hely nullazasa a titkos bufferben  
+  for (int i = 0; i < MAX_TITKOS - (p - titkos); ++i)
+    titkos[p - titkos + i] = '\0';
+
+  // osszes kulcs eloallitasa
+char a[5]={'k','u','t','y','a'};
+  for (int ii = 0; ii <= 4; ++ii)
+    for (int ji = 0; ji <= 4; ++ji)
+      for (int ki = 0; ki <= 4; ++ki)
+	for (int li = 0; li <= 4; ++li)
+	  for(int mi=0; mi<=4; ++mi)
+	 	  {
+		    kulcs[0] = a[ii];
+		    kulcs[1] = a[ji];
+		    kulcs[2] = a[ki];
+		    kulcs[3] = a[li];
+		    kulcs[4] = a[mi];
+
+		
+		    //printf("%c", a[li]);
+
+		    if (exor_tores (kulcs, KULCS_MERET, titkos, p - titkos))
+		      printf
+			("Kulcs: [%c%c%c%c%c]\nTiszta szoveg: [%s]\n",
+			 a[ii], a[ji], a[ki], a[li], a[mi],  titkos);
+
+		    // ujra EXOR-ozunk, igy nem kell egy masodik buffer  
+		    exor (kulcs, KULCS_MERET, titkos, p - titkos);
+		  }
+
+  return 0;
+}
+
+        ]]>
+        </programlisting>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            A feladatban egy az előző felatokban bemutatott exor segítségével titkosított szövegett probálunk meg feltörni. Amit fel tudunk használni, hogy ismerjük a kulcs karaktereit, illetve a hosszát. Ekkor több egymásba ágyazott <literal>for</literal> ciklus segítségével előállítjuk az összes lehetséges jelszót. Annyi <literal>for</literal>-t használunk, ahány hosszú a kulcs. Emellet van egy függvényünk, ami azt vizsgálja, hogy lehetséges, hogy a kulcs segítségével volt szöveg volt az eredeti szöveg. Ezt a magyar nyelv néhány statisztikai jellemzóje segítségével teszteli. Megnézi, hogy megtalálható-e a szövegben a magyar nyelv leggyakrabban használt szavai közül valamelyik. Illetve a magyar nyelv átlagos szóhossza érvényes-e a szövegben. Ha ezeknek a feltételeknek megfelel egy szöveg, akkor visszakapjuk a lehetséges eredeti szöveget és a hozzá tartozó kulcsot a kimeneten.
         </para>            
-    </section>        
+    </section>  
+
+
+
+
+
     <section>
         <title>Neurális OR, AND és EXOR kapu</title>
         <para>
@@ -146,9 +367,74 @@ main ()
             Megoldás forrása: <link xlink:href="https://gitlab.com/nbatfai/bhax/tree/master/attention_raising/NN_R">https://gitlab.com/nbatfai/bhax/tree/master/attention_raising/NN_R</link>               
         </para>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
+            A program megírása során egy neurális hálónak fogjuk megtanítani a logikai alapműveleteket. Először az or, azaz vagy műveletet adjuk meg. Két lista segítségével előállítjuk a lehetséges állapotokat, úgy hogy a listák azonos elemeit használva egy OR nevű lista azonos számú elemét a megfelelő értéknek mentjük el. Ezután a neuralnet függvénynek betápláljuk a megkapott adatokat. És ennek segítségével a bemenetekhez olyan súlyt próbál számolni, amivel őket megszorozva majd a szorzatokat összeadva általánosságban megkapjuk a megfelelő kimeneteket. Ehhez használhatunk rejtett neuronokat is melyek segítik a pontosabb eredmény megkapását. Ha megtalálja a megfelelő súlyokat, akkor megtanulta a neuronháló az adott műveletet. 
         </para>            
-    </section>        
+        <programlisting language="r">
+        <![CDATA[
+        library(neuralnet)
+
+a1    <- c(0,1,0,1)
+a2    <- c(0,0,1,1)
+OR    <- c(0,1,1,1)
+
+or.data <- data.frame(a1, a2, OR)
+
+nn.or <- neuralnet(OR~a1+a2, or.data, hidden=0, linear.output=FALSE, stepmax = 1e+07, threshold = 0.000001)
+
+plot(nn.or)
+
+compute(nn.or, or.data[,1:2])
+
+        ]]>
+        </programlisting>
+
+        <para>
+            A második példa az and azaz az és. Itt is az előző példának megfelelő műveleteket végezzük el, csak eredetileg az és műveletnek mmegfelelő értékeket reprezentálja.
+        </para>
+        <programlisting language="r">
+            <![CDATA[
+            a1    <- c(0,1,0,1)
+a2    <- c(0,0,1,1)
+AND   <- c(0,0,0,1)
+
+and.data <- data.frame(a1, a2, AND)
+
+nn.and <- neuralnet(AND~a1+a2, and.data, hidden=0, linear.output=FALSE, stepmax = 1e+07, threshold = 0.000001)
+
+plot(nn.and)
+
+compute(nn.and, and.data[,1:2])
+
+            ]]>
+        </programlisting>
+
+        <para>
+            A harmadik művelet, amelyet vizsgálunk, az a xor vagyis a kizáró vagy. Ebben az esetben, ha rejtett neuronok nélkül, azaz az előző példák mintájára szeretnénk végrehajtani a feladatot, akkor nem ad vissza megfelelő eredményt. Viszont, ha rejtett neuronok számát legalább kettőre állítjuk, akkor már megfelelő eredményt kapunk. 
+        </para>
+        <programlisting language="r">
+            <![CDATA[
+
+            a1      <- c(0,1,0,1)
+a2      <- c(0,0,1,1)
+EXOR    <- c(0,1,1,0)
+
+exor.data <- data.frame(a1, a2, EXOR)
+
+nn.exor <- neuralnet(EXOR~a1+a2, exor.data, hidden=2, linear.output=FALSE, stepmax = 1e+07, threshold = 0.000001)
+
+plot(nn.exor)
+
+compute(nn.exor, exor.data[,1:2])
+
+            ]]>
+        </programlisting>
+    </section>   
+
+
+
+
+
+
     <section>
         <title>Hiba-visszaterjesztéses perceptron</title>
         <para>
@@ -161,8 +447,40 @@ main ()
             Megoldás forrása: <link xlink:href="https://github.com/nbatfai/nahshon/blob/master/ql.hpp#L64">https://github.com/nbatfai/nahshon/blob/master/ql.hpp#L64</link>               
         </para>
         <para>
-            Tanulságok, tapasztalatok, magyarázat...
-        </para>            
+            Ebben a feladataban az előző feladatban már megismert neurális hálót fogjuk alkalmazni egy kép valamely adott RGB komponensére. Ehhez meg kell hívnunk egy mlp.hpp nevű könyvtárat és a kép miatt a png++/png.hpp könyvtárat. A fordítást emiatt a következő parancs segítségével végezhetjük: <command>g++ mlp.hpp perceptron.cpp -o perceptron -lpng</command>. Az mlp.hpp könyvtár <link xlink:href="Caesar/mlp.hpp"><filename>itt</filename></link> található meg.
+        </para>   
+        <programlisting language="c">
+        <![CDATA[
+
+        #include <iostream>
+#include "mlp.hpp"
+#include <png++/png.hpp>
+
+int main(int argc, char **argv)
+{
+    png::image<png::rgb_pixel>png_image(argv[1]);
+    int size = png_image.get_width()*png_image.get_height();
+    Perceptron* p = new Perceptron(3, size ,256, 1);
+    double* kep = new double[size];
+
+    for (int i=0; i<png_image.get_width; i++)
+        for (int j=0; j<png_image.get_height; j++)
+        {
+            image[i*png_image.get_width+j] = png_image[i][j].red;
+        }
+
+    double value = (*p)(image);
+    std::cout<<value<<std::endl;
+    
+    delete p;
+    delete [] image;
+}
+
+        ]]>
+        </programlisting>       
+        <para>
+            A megoldás során a kép egyes képpontjainak vörös árnyalatának értékét mentjük el egy egydimenziós tömbbe sorfolytonosan, ezek az értékek lesznek a perceptron bemeneti értékei. Emmellett beillesztünk 256 rejtett neuront is és végül egy neuronon kapjuk vissza a kívánt értéket.
+        </para>  
     </section>        
         
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
