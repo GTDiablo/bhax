@@ -9,9 +9,19 @@ Hosszabb távon utánpótlás esport csapatok szervezésének tartalmi támogat�
 ### Feladatok száma
 |Turing (9)|Gutenberg (4)|Chomsky (9)|Caesar (7)|Mandelbrot (7)|Welch (7)|Conway (5)|Schwarzenegger (4)|Chaitin (4)|
 |:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-|9|4|9|0|0|0|0|0|0|
+|9|4|9|7|0|0|0|0|0|
 
 ### P1TP pontok
 |Labor| Előadás|
 |:---:|:---:|
-|5|0|
+|7|10|
+
+- előadás
+  - Minecraft smart steve 21 rf & magyarázat
+
+- labor
+    - XOR 
+    - human inteligence
+    - telefonos cucc
+    - tarts rajta az egeret 10 percig cucc
+    - bogomips
