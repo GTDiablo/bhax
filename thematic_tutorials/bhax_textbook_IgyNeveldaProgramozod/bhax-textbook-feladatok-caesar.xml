@@ -887,7 +887,7 @@ int main (int argc, char **argv)
         </para>
         <para>
             Megoldás forrása: <link xlink:href="Forraskodok/Caesar/mitlatsteve.py">
-            	<filename>bhax/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Caesar/mitlatsteve.py</filename>
+            	<filename>bhax/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Forraskodok/Caesar/mitlatsteve.py</filename>
             </link>, <link xlink:href="http://hackers.inf.unideb.hu:443/RedFlowerHell/">http://hackers.inf.unideb.hu:443/RedFlowerHell/</link>
         </para>
         <para>

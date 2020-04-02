@@ -1121,7 +1121,7 @@ public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
             Megoldás videó: <link xlink:href="">Még nincs</link>
         </para>
         <para>
-            Megoldás forrása: <link xlink:href="Forraskodok/Mandelbrot/5.7/m_lava.py"> <filename>bhax/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Mandelbrot/lava_fel_le.py</filename></link>, <link xlink:href="https://github.com/nbatfai/RedFlowerHell">https://github.com/nbatfai/RedFlowerHell</link>               
+            Megoldás forrása: <link xlink:href="Forraskodok/Mandelbrot/5.7/m_lava.py"> <filename>bhax/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Forraskodok/Mandelbrot/lava_fel_le.py</filename></link>, <link xlink:href="https://github.com/nbatfai/RedFlowerHell">https://github.com/nbatfai/RedFlowerHell</link>               
         </para>
         <para>
             Mivel már Steve képes érzékelni a környezetében lévő objektumokat, nincs nehéz dolgunk. Elindítjuk a felfelé, majd amint érzékeli maga előtt a folyó lávát, kétszer 90 fokot fordul és elindul lefelé, a pálya közepére. Ekkor a program megáll.

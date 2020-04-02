@@ -18,6 +18,9 @@ Hosszabb távon utánpótlás esport csapatok szervezésének tartalmi támogat�
 
 - előadás
   - Minecraft smart steve 21 rf & magyarázat
+  - minecart csiga -
+  - minecraft mit lát steve -
+  - minecraft láva oda vissza -
 
 - labor
     - XOR 
