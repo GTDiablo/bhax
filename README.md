@@ -7,14 +7,14 @@ Hosszabb távon utánpótlás esport csapatok szervezésének tartalmi támogat�
 
 
 ### Feladatok száma
-|Turing (9)|Gutenberg (4)|Chomsky (9)|Caesar (7)|Mandelbrot (7)|Welch (7)|Conway (5)|Schwarzenegger (4)|Chaitin (4)|
-|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-|9|4|9|7|0|0|0|0|0|
+| Turing (9) | Gutenberg (4) | Chomsky (9) | Caesar (7) | Mandelbrot (7) | Welch (7) | Conway (5) | Schwarzenegger (4) | Chaitin (4) |
+| :--------: | :-----------: | :---------: | :--------: | :------------: | :-------: | :--------: | :----------------: | :---------: |
+|     9      |       4       |      9      |     7      |       7        |     0     |     0      |         0          |      0      |
 
 ### P1TP pontok
-|Labor| Előadás|
-|:---:|:---:|
-|7|10|
+| Labor | Előadás |
+| :---: | :-----: |
+|  10   |   16    |
 
 - előadás
   - Minecraft smart steve 21 rf & magyarázat
@@ -25,3 +25,5 @@ Hosszabb távon utánpótlás esport csapatok szervezésének tartalmi támogat�
     - telefonos cucc
     - tarts rajta az egeret 10 percig cucc
     - bogomips
+
+# ! Windowson van egy txt-ben miket csináltam meg, linuxon nem férek hozzá.... Majd frissítem
