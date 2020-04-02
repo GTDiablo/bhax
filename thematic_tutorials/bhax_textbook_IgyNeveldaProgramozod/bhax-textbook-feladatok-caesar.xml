@@ -876,6 +876,83 @@ int main (int argc, char **argv)
             A kiadott eredmény: <command>0.731044</command>
         </para> 
 
-    </section>        
+    </section>   
+     <section>
+        <title>Vörös Pipacs Pokol/írd ki, mit lát Steve</title>
+        <para>
+            Írj olyan Minecraft MALMÖ python programot, ami kiírja, hogy Steve milyen blokkokat érzékel maga előtt!
+        </para>
+        <para>
+            Megoldás videó: <link xlink:href="">link</link>
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="Forraskodok/Caesar/mitlatsteve.py">
+            	<filename>bhax/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Caesar/mitlatsteve.py</filename>
+            </link>, <link xlink:href="http://hackers.inf.unideb.hu:443/RedFlowerHell/">http://hackers.inf.unideb.hu:443/RedFlowerHell/</link>
+        </para>
+        <para>
+            A belinkelt forrás alapján "felokosítjuk" az előző fejezetben megírt kódunkat, így Steve mozgás közben érzékeli az őt körülvevő blokkokat. Ezek is mind kiírathatók, de az alábbi kódban ki vannak kommentelve, így csak a <literal>LineOfSight</literal> látható, ami mindig azt a blokkot jelenti, amelyikre Steve néz. Ez fog nekünk segíteni abban, hogy bizonyos dolgok láttán különböző cselekvéseket rendelhessünk a karakterhez.
+        </para>
+        <programlisting language="python"><![CDATA[class Steve:
+    def __init__(self, agent_host):
+        self.agent_host = agent_host
+        
+        self.nof_red_flower = 0
+
+    def run(self):
+        world_state = self.agent_host.getWorldState()
+        uthossz = 9
+        szamlalo = 0
+        self.agent_host.sendCommand( "look 1" )
+        while world_state.is_mission_running:
+            for i in range(uthossz):
+                self.agent_host.sendCommand( "move 1" )
+                time.sleep(.23)
+                world_state = self.agent_host.getWorldState()
+
+                if world_state.number_of_observations_since_last_state != 0:
+                
+                    sensations = world_state.observations[-1].text
+                    #print("    sensations: ", sensations)                
+                    observations = json.loads(sensations)
+                    nbr3x3x3 = observations.get("nbr3x3", 0)
+                    #print("    3x3x3 neighborhood of Steve: ", nbr3x3x3)
+                    
+                    if "Yaw" in observations:
+                        self.yaw = int(observations["Yaw"])
+                    if "Pitch" in observations:
+                        self.pitch = int(observations["Pitch"])
+                    if "XPos" in observations:
+                        self.x = int(observations["XPos"])
+                    if "ZPos" in observations:
+                        self.z = int(observations["ZPos"])        
+                    if "YPos" in observations:
+                        self.y = int(observations["YPos"])  
+                    
+                    #print("    Steve's Coords: ", self.x, self.y, self.z)        
+                    #print("    Steve's Yaw: ", self.yaw)        
+                    #print("    Steve's Pitch: ", self.pitch)
+                    
+                    if "LineOfSight" in observations:
+                        lineOfSight = observations["LineOfSight"]
+                        self.lookingat = lineOfSight["type"]
+                        print("    Steve's <): ", self.lookingat)
+
+            szamlalo = szamlalo + 1
+            if szamlalo % 4 == 0:
+                self.agent_host.sendCommand( "jumpmove 1" )
+                time.sleep(.5)
+                self.agent_host.sendCommand( "move 1" )
+                time.sleep(.5)
+                self.agent_host.sendCommand( "turn -1" )
+                time.sleep(.5)
+                uthossz = uthossz + 4
+            else:
+                self.agent_host.sendCommand( "turn -1" )
+                time.sleep(.5)
+            world_state = self.agent_host.getWorldState()
+]]></programlisting> 
+    </section>  
+     
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 </chapter>    
