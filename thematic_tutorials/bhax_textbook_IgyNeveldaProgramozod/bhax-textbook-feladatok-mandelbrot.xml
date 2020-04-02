@@ -1111,5 +1111,76 @@ public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
         </figure> 
         
     </section>
+     <section>
+        <title>Vörös Pipacs Pokol/fel a láváig és vissza</title>
+        <para>
+            Írj olyan Minecraft MALMÖ python programot, ami felküldi a láváig Steve-et, majd visszafordítja és leküldi onnan.
+        </para>
+
+        <para>
+            Megoldás videó: <link xlink:href="">Még nincs</link>
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="Forraskodok/Mandelbrot/5.7/m_lava.py"> <filename>bhax/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Mandelbrot/lava_fel_le.py</filename></link>, <link xlink:href="https://github.com/nbatfai/RedFlowerHell">https://github.com/nbatfai/RedFlowerHell</link>               
+        </para>
+        <para>
+            Mivel már Steve képes érzékelni a környezetében lévő objektumokat, nincs nehéz dolgunk. Elindítjuk a felfelé, majd amint érzékeli maga előtt a folyó lávát, kétszer 90 fokot fordul és elindul lefelé, a pálya közepére. Ekkor a program megáll.
+        </para>
+        <programlisting language="python"><![CDATA[class Steve:
+    def __init__(self, agent_host):
+        self.agent_host = agent_host
+        
+        self.nof_red_flower = 0
+
+    def run(self):
+        world_state = self.agent_host.getWorldState()
+        self.agent_host.sendCommand( "look 1" )
+        while world_state.is_mission_running:
+            for i in range(100):
+                self.agent_host.sendCommand( "move 1" )
+                time.sleep(.5)
+                self.agent_host.sendCommand( "jumpmove 1" )
+                time.sleep(.5)
+                world_state = self.agent_host.getWorldState()
+                i=i+1
+
+                if world_state.number_of_observations_since_last_state != 0:
+                
+                    sensations = world_state.observations[-1].text
+                    #print("    sensations: ", sensations)                
+                    observations = json.loads(sensations)
+                    nbr3x3x3 = observations.get("nbr3x3", 0)
+                    print("    3x3x3 neighborhood of Steve: ", nbr3x3x3)
+                    
+                    if "Yaw" in observations:
+                        self.yaw = int(observations["Yaw"])
+                    if "Pitch" in observations:
+                        self.pitch = int(observations["Pitch"])
+                    if "XPos" in observations:
+                        self.x = int(observations["XPos"])
+                    if "ZPos" in observations:
+                        self.z = int(observations["ZPos"])        
+                    if "YPos" in observations:
+                        self.y = int(observations["YPos"])  
+                    
+                    #print("    Steve's Coords: ", self.x, self.y, self.z)        
+                    #print("    Steve's Yaw: ", self.yaw)        
+                    #print("    Steve's Pitch: ", self.pitch)
+                    
+                    if nbr3x3x3[18] == "flowing_lava":
+                        self.agent_host.sendCommand( "turn 1" )
+                        time.sleep(.2)
+                        self.agent_host.sendCommand( "turn 1" )
+                        time.sleep(.2)
+                        for i in range(100):
+                            self.agent_host.sendCommand( "move 1" )
+                            time.sleep(.02)
+                        quit()
+                            
+            world_state = self.agent_host.getWorldState()
+
+]]></programlisting>            
+    </section>  
+
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 </chapter>      
