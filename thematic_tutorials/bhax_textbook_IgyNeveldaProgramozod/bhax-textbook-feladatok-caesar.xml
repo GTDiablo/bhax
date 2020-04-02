@@ -542,10 +542,7 @@ main (void)
         <para>
             Megoldás forrása: <link xlink:href="https://gitlab.com/nbatfai/bhax/tree/master/attention_raising/NN_R">https://gitlab.com/nbatfai/bhax/tree/master/attention_raising/NN_R</link>               
         </para>
-        <para>
-            A feladatban tutora voltam Racs Tamás-nak, a repója elérhető a következő linken: 
-            <link xlink:href="https://gitlab.com/cant0r/bhax">https://gitlab.com/cant0r/bhax</link>
-        </para>
+
         <para>
             A neurális hálók irányított (bemeneti és kimeneti) kapcsolatokkal összekötött egységekből állnak. Az a(0-j) 
             az inputról (más idegsejtekből) bejövő axonok, kapcsolatok (az "a"-k). Ezekből az "a"-kból rendre csinál egy eltolási súlyt, 
@@ -627,7 +624,7 @@ compute(nn.or, or.data[,1:2])]]>
             <title>Neurális OR eredmény</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="img/neuor2.png" scale="45" />
+                    <imagedata fileref="img/neuron1.png" scale="45" />
                 </imageobject>
                 <textobject>
                     <phrase>Neurális OR eredmény</phrase>
@@ -669,7 +666,7 @@ compute(nn.orand, orand.data[,1:2])]]>
             <title>Neurális AND eredmény</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="img/neuand2.png" scale="45" />
+                    <imagedata fileref="img/neuron1.png" scale="45" />
                 </imageobject>
                 <textobject>
                     <phrase>Neurális AND eredmény</phrase>
@@ -713,7 +710,7 @@ compute(nn.exor, exor.data[,1:2])]]>
             <title>Neurális EXOR eredmény</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="img/neuexor2.png" scale="45" />
+                    <imagedata fileref="img/neuron1.png" scale="45" />
                 </imageobject>
                 <textobject>
                     <phrase>Neurális EXOR eredmény</phrase>
@@ -751,28 +748,7 @@ compute(nn.exor, exor.data[,1:2])]]>
                 </textobject>
             </mediaobject>
         </figure> 
-        <figure>
-            <title>Neurális EXOR eredmény</title>
-            <mediaobject>
-                <imageobject>
-                    <imagedata fileref="img/neu_exor2.png" scale="45" />
-                </imageobject>
-                <textobject>
-                    <phrase>Neurális EXOR eredmény</phrase>
-                </textobject>
-            </mediaobject>
-        </figure> 
-        <figure>
-            <title>Neurális EXOR eredmény</title>
-            <mediaobject>
-                <imageobject>
-                    <imagedata fileref="img/neu_exor3.png" scale="45" />
-                </imageobject>
-                <textobject>
-                    <phrase>Neurális EXOR eredmény</phrase>
-                </textobject>
-            </mediaobject>
-        </figure> 
+        
                   
     </section> 
            
