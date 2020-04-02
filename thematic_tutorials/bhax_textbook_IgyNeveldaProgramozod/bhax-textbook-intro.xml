@@ -55,54 +55,48 @@
             </itemizedlist>            
         </section>
         <section>
-            <title>Milyen filmeket nézzek meg?</title>
+            <title>Milyen filmeket, sorozatokat nézzek meg?</title>
             <itemizedlist>
                 <listitem>
-                    <para>21 - Las Vegas ostroma, 
-                        <link xlink:href="https://www.imdb.com/title/tt0478087/">https://www.imdb.com/title/tt0478087/</link>,
+                    <para> 
+                        <link xlink:href="https://www.imdb.com/title/tt0478087/">21 - Las Vegas ostroma</link>,
                         benne a <link xlink:href="#bhax-textbook-feladatok-turing.MontyHall">Monty Hall probléma</link> bemutatása.
                     </para>                        
                 </listitem>
                 <listitem>
-                    <para>Kódjátszma, 
-                        <link xlink:href="https://www.imdb.com/title/tt2084970">https://www.imdb.com/title/tt2084970</link>,
+                    <para> 
+                        <link xlink:href="https://www.imdb.com/title/tt2084970">Kódjátszma</link>,
                         benne a <link xlink:href="#bhax-textbook-feladatok-caesar.EXOR-toro">kódtörő feladat</link> élménye.
                     </para>                        
                 </listitem>
                 <listitem>
-                    <para>, 
-                        <link xlink:href=""></link>,
-                        benne a <link xlink:href="#"></link> bemutatása.
+                    <para>
+                        <link xlink:href="https://www.imdb.com/title/tt0268978/">Egy csodálatos elme</link>,
+                        benne a zsenialitás mellett megjelenő küzdelmes lét.
                     </para>                        
                 </listitem>
                 <listitem>
-                    <para>, 
-                        <link xlink:href=""></link>,
-                        benne a <link xlink:href="#"></link> bemutatása.
+                    <para>
+                        <link xlink:href="https://www.imdb.com/title/tt4158110/">Mr. Robot</link> S02E11,
+                        benne a dekódolás folyamatának bemutatása. Ezen felül az egész sorozatot érdemes végignézni.
                     </para>                        
                 </listitem>
                 <listitem>
-                    <para>, 
-                        <link xlink:href=""></link>,
-                        benne a <link xlink:href="#"></link> bemutatása.
+                    <para>
+                        <link xlink:href="https://www.imdb.com/title/tt0475784/">Westworld</link>,
+                        benne az emberi elme és a mesterséges intelligencia közti különbségek és hasonlóságok bemutatása.
                     </para>                        
                 </listitem>
                 <listitem>
-                    <para>, 
-                        <link xlink:href=""></link>,
-                        benne a <link xlink:href="#"></link> bemutatása.
+                    <para>
+                        <link xlink:href="https://www.imdb.com/title/tt0133093/?ref_=fn_al_tt_1">Mátrix</link>,
+                        benne szintén a mesterséges intelligencia és az ember kapcsolata, a technológia fellázadása az őt megteremtő ember ellen.
                     </para>                        
                 </listitem>
                 <listitem>
-                    <para>, 
-                        <link xlink:href=""></link>,
-                        benne a <link xlink:href="#"></link> bemutatása.
-                    </para>                        
-                </listitem>
-                <listitem>
-                    <para>, 
-                        <link xlink:href=""></link>,
-                        benne a <link xlink:href="#"></link> bemutatása.
+                    <para>
+                        <link xlink:href="https://www.imdb.com/title/tt0208092/">Blöff</link> / <link xlink:href="https://www.imdb.com/title/tt0120735/">A Ravasz, az Agy és két füstölgő puskacső</link>,
+                        ezeknek egyáltalán nincs közük a tematikához, de tökéletes, ha szeretnénk egy kis szünetet tartani a nagy programozás tanulásban. Illetve mindenkinek illik legalább egy idézetet fejből tudni belőlük.
                     </para>                        
                 </listitem>
             </itemizedlist> 
