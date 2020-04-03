@@ -589,10 +589,10 @@ main (void)
             Használd ugyanazt a while ciklus fejet, amit Linus Torvalds a BogoMIPS rutinjában! 
         </para>
         <para>
-            Megoldás videó: <link xlink:href=""></link>
+            Megoldás videó: <link xlink:href="https://youtu.be/RMR5URhR1Vw">https://youtu.be/RMR5URhR1Vw</link>
         </para>
         <para>
-            Megoldás forrása: <link xlink:href=""></link>
+            Megoldás forrása: <link xlink:href="https://youtu.be/9KnMqrkj_kU">https://youtu.be/9KnMqrkj_kU</link>
         </para>
         <para>
             Elsősorban vizsgáljunk meg egy olyan programot, amelyik megnézi, hogy hány bites a szó a gépünkön, azaz mekkora az <type>int</type> mérete, a <command>sizeof</command> segítségével.
