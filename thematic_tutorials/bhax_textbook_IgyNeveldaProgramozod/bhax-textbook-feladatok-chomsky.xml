@@ -11,7 +11,10 @@
             Állapotátmenet gráfjával megadva írd meg ezt a gépet!
         </para>
         <para>
-            Megoldás videó:
+        Szerintem a kód és amit csinál nagyon egyértelmű volt és reészletesen is dokumentáltam a könyvben, ezért egyéb alámondást nem igényel a videó.
+        </para>
+        <para>
+            Megoldás videó: <link xlink:href="https://youtu.be/oVu98nTAJ1c">https://youtu.be/oVu98nTAJ1c</link> Saját megoldás
         </para>
         <para>
             Megoldás forrása: <link xlink:href="https://www.tankonyvtar.hu/hu/tartalom/tkt/javat-tanitok-javat/ch01.html#id511324">https://www.tankonyvtar.hu/hu/tartalom/tkt/javat-tanitok-javat/ch01.html#id511324</link>               
@@ -97,10 +100,7 @@ main()
             Mutass be legalább két környezetfüggő generatív grammatikát, amely ezt a nyelvet generálja!
         </para>
         <para>
-            Megoldás videó:
-        </para>
-        <para>
-            Megoldás forrása:                
+            Megoldás videó: <link xlink:href="https://youtu.be/svP3nUfClcc">https://youtu.be/svP3nUfClcc </link>
         </para>
         <para>
             A generatív gramatika Noam Chomsky nevéhez kötődik. Úgy vizsgálja a nyelvtant mint az ismeret alapját, hiszen ha
@@ -172,10 +172,13 @@ S (A kezdőszimbólum)
             Majd mutass be olyan kódcsipeteket, amelyek adott szabvánnyal nem fordulnak (például C89), mással (például C99) igen.
         </para>
         <para>
-            Megoldás videó: 
+        Szerintem a kód és amit csinál nagyon egyértelmű volt és reészletesen is dokumentáltam a könyvben, ezért egyéb alámondást nem igényel a videó.
         </para>
         <para>
-            Megoldás forrása:  
+            Megoldás videó: <link xlink:href="https://youtu.be/MOgOZ6qS-d4">https://youtu.be/MOgOZ6qS-d4</link>
+        </para>
+        <para>
+            Megoldás forrása: <link xlink:href="http://www.zmgzeg.sulinet.hu/bemutatkozunk/tankonyv/progismhalado/ccpp/c99c11.pdf">Tóth Bertalan - A C99 és a C11 szabványok új lehetőségeinek áttekintése</link>
         </para>
         <para>
             A C utasítás fogalma BNF-ben való definiálása:
@@ -260,10 +263,10 @@ printf("%d", x);
             a feladat lényege, hogy lexert használjunk, azaz óriások vállán álljunk és ne kispályázzunk!
         </para>
         <para>
-            Megoldás videó: <link xlink:href="https://youtu.be/9KnMqrkj_kU">https://youtu.be/9KnMqrkj_kU</link> (15:01-től).
+            Megoldás videó: <link xlink:href="https://youtu.be/8Nr9j0WH1VY">https://youtu.be/8Nr9j0WH1VY</link> saját megoldás
         </para>
         <para>
-            Megoldás forrása:
+            Megoldás forrása:<link xlink:href="https://youtu.be/9KnMqrkj_kU">https://youtu.be/9KnMqrkj_kU</link> (15:01-től).
         </para>
         <para>
             A lexer egy olyan program amelyik megír, összeállít nekünk egy C programot. A lex programok úgymond több részből tevődnek össze, ezeket a részeket %%-al vannak elválasztva egymástól.
@@ -350,6 +353,7 @@ main ()
             Lexelj össze egy l33t ciphert!
         </para>
         <para>
+            Saját: <link xlink:href="https://youtu.be/hb6_szp_qD0">https://youtu.be/hb6_szp_qD0</link>
             Megoldás videó: <link xlink:href="https://www.youtube.com/watch?v=06C_PqDpD_k">https://www.youtube.com/watch?v=06C_PqDpD_k</link>
         </para>
         <para>
@@ -523,14 +527,15 @@ main()
             kezelje. (Miután a <command>man 7 signal</command> lapon megismertem a SIGINT jelet, a
             <command>man 2 signal</command> lapon pedig a használt rendszerhívást.)
         </para>
-
-        <caution>
+         <caution>
             <title>Bugok</title>
             <para>
                 Vigyázz, sok csipet kerülendő, mert bugokat visz a kódba! Melyek ezek és miért? 
                 Ha nem megy ránézésre, elkapja valamelyiket esetleg a splint vagy a frama?
             </para>
         </caution>
+
+
             
         <orderedlist numeration="lowerroman">
             <listitem>                                    
@@ -541,6 +546,7 @@ main()
                     akkor a <function>jelkezelo</function> függvény tegyen róla, kezelje.
                 </para>
             </listitem>
+            
             
             <listitem>                                    
                 <programlisting><![CDATA[for(i=0; i<5; ++i)]]></programlisting>
@@ -614,6 +620,10 @@ main()
         <para>
             Hogyan olvasod természetes nyelven az alábbi Ar nyelvű formulákat?
         </para>
+        <para>
+            Az alábbi kódokat egy online LaTex fordítóval vizsgáltam, de a képeket amiket visszaadott túl kicsik voltak, így nem tudtam őket betenni.
+        </para>
+        
         <programlisting language="tex">
 <![CDATA[$(\forall x \exists y ((x<y)\wedge(y \text{ prím})))$]]>
         </programlisting> 
@@ -660,7 +670,10 @@ main()
         <title>Deklaráció</title>  
         <para>
             Vezesd be egy programba (forduljon le) a következőket. / Mit vezetnek be a programba a következő nevek?
-        </para>           
+        </para> 
+        <para>
+            Szerintem erről nem kell külön videő, mert akár egy szó is teljesen jól elmagyarázza
+        </para>        
 
         <itemizedlist>
             <listitem> 
