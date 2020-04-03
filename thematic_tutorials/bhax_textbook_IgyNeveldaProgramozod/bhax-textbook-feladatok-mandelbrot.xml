@@ -10,7 +10,9 @@
         <para>
             Írj olyan C programot, amely kiszámolja a Mandelbrot halmazt!     
         </para>
+        
         <para>
+            Saját videó: <link xlink:href="https://youtu.be/gatSqxBdT-0">https://youtu.be/gatSqxBdT-0</link>
             Megoldás videó: <link xlink:href="https://youtu.be/gvaqijHlRUs">https://youtu.be/gvaqijHlRUs</link>
         </para>
         <para>
@@ -214,7 +216,9 @@ main (int argc, char *argv[])
         <para>
             Írj olyan C++ programot, amely kiszámolja a Mandelbrot halmazt!                     
         </para>
+        
         <para>
+            Saját videó: <link xlink:href="https://youtu.be/fOy4XmlGTBs">https://youtu.be/fOy4XmlGTBs</link>
             Megoldás videó: <link xlink:href="https://youtu.be/gvaqijHlRUs">https://youtu.be/gvaqijHlRUs</link>
         </para>
         <para>
@@ -223,9 +227,6 @@ main (int argc, char *argv[])
             ismert algoritmust valósítja meg a repó <link xlink:href="../../../bhax/attention_raising/Mandelbrot/3.1.2.cpp">
                 <filename>bhax/attention_raising/Mandelbrot/3.1.2.cpp</filename>
             </link> nevű állománya.
-        </para>
-        <para>
-            A feladatban tutora voltam Schachinger Zsolt-nak.
         </para>
         <para>
             Felvetődik egy kérdés: melyikaz a szám amelyiket önmagával megszorozva 9-et kapunk (természetesen ez a 3). 
@@ -396,7 +397,9 @@ main ( int argc, char *argv[] )
                 
     <section>
         <title>Biomorfok</title>
+        
         <para>
+            Saját videó: <link xlink:href="https://youtu.be/k2xBjAfKwmM">https://youtu.be/k2xBjAfKwmM</link>
             Megoldás videó: <link xlink:href="https://youtu.be/IJMbgRzY76E">https://youtu.be/IJMbgRzY76E</link>
         </para>
         <para>
@@ -584,6 +587,7 @@ main ( int argc, char *argv[] )
         <para>
         </para>
         <para>
+            Saját videó: <link xlink:href="https://youtu.be/emIPH7XGohg">https://youtu.be/emIPH7XGohg</link>
             Megoldás videó: <link xlink:href="https://youtu.be/gvaqijHlRUs">https://youtu.be/gvaqijHlRUs</link>
         </para>
         <para>
@@ -591,9 +595,6 @@ main ( int argc, char *argv[] )
             <link xlink:href="../../../bhax/attention_raising/CUDA/mandelpngc_60x60_100.cu">
                 <filename>bhax/attention_raising/CUDA/mandelpngc_60x60_100.cu</filename>
             </link> nevű állománya.            
-        </para>
-        <para>
-            A feladatban tutorom volt Racs Tamás.
         </para>
         <para> 
             A forráskód megtalálható a következő linken is: <link xlink:href="Forraskodok/Mandelbrot/5.4/mandelpngc_60x60_100.cu">../Forraskodok/Mandelbrot/5.4/mandelpngc_60x60_100.cu</link>   
@@ -753,8 +754,7 @@ main (int argc, char *argv[])
             Míg a CPU-t használó program 15 másodpercet vett igénybe, addig CUDA-s program mintegy 0.15 másodperc 
             alatt kiszámolja nekünk ugyanazt az eredményt. A két program leírásban nagyon hasonlít az előző feladathoz,
             mint mondtam itt a számítási idők mások, ezt az időt a program során számoljuk és iratjuk ki, hogy legyen ű
-            vizsonyítási alapunk. Mivel nekem nincs CUDA kártyám ezért nem tudom élvezni ezt a gyors programfutás által
-            gerjeszett élményeket, de a fent belinkelt videón mindez megtapasztalható.
+            vizsonyítási alapunk.
         </para>
     </section>                     
 
@@ -765,11 +765,8 @@ main (int argc, char *argv[])
             egérrel kiválasztva vizualizálja onnan a komplex iteréció bejárta z<subscript>n</subscript> komplex számokat!
         </para>
         <para>
-            Megoldás videó: <link xlink:href=""></link>
+            Megoldás videó: <link xlink:href="https://youtu.be/MKaauOCmyE4">https://youtu.be/MKaauOCmyE4</link>
             Illetve <link xlink:href="https://bhaxor.blog.hu/2018/09/02/ismerkedes_a_mandelbrot_halmazzal">https://bhaxor.blog.hu/2018/09/02/ismerkedes_a_mandelbrot_halmazzal</link>.        </para>
-        <para>
-            Megoldás forrása: <link xlink:href=""></link>
-        </para>
         <para> 
             A forráskód megtalálható a következő linken is: <link xlink:href="Forraskodok/Mandelbrot/5.5/mandelbrotnagyito.cpp">../Forraskodok/Mandelbrot/5.5/mandelbrotnagyito.cpp</link>   
         </para> 
@@ -905,7 +902,9 @@ main ( int argc, char *argv[] )
                                                                                                                                                                             
     <section>
         <title>Mandelbrot nagyító és utazó Java nyelven</title>
+        
         <para>
+            Saját videó: <link xlink:href="https://youtu.be/4SIUJsVKsvI">https://youtu.be/4SIUJsVKsvI</link>
             Megoldás videó: <link xlink:href="https://youtu.be/Ui3B6IJnssY">https://youtu.be/Ui3B6IJnssY</link>, 4:27-től.
             Illetve <link xlink:href="https://bhaxor.blog.hu/2018/09/02/ismerkedes_a_mandelbrot_halmazzal">https://bhaxor.blog.hu/2018/09/02/ismerkedes_a_mandelbrot_halmazzal</link>.
         </para>

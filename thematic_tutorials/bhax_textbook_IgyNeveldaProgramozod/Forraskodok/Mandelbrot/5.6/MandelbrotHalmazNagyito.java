@@ -1,5 +1,5 @@
 /*
- * MandelbrotHalmazNagyító.java
+ * MandelbrotHalmazNagyito.java
  *
  * DIGIT 2005, Javat tanítok
  * Bátfai Norbert, nbatfai@inf.unideb.hu
@@ -11,7 +11,7 @@
  * @author Bátfai Norbert, nbatfai@inf.unideb.hu
  * @version 0.0.1
  */
-public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
+public class MandelbrotHalmazNagyito extends MandelbrotHalmaz {
     /** A nagyítandó kijelölt területet bal felső sarka. */
     private int x, y;
     /** A nagyítandó kijelölt terület szélessége és magassága. */
@@ -19,7 +19,7 @@ public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
     /**
      * Létrehoz egy a Mandelbrot halmazt a komplex sík
      * [a,b]x[c,d] tartománya felett kiszámoló és nygítani tudó
-     * <code>MandelbrotHalmazNagyító</code> objektumot.
+     * <code>MandelbrotHalmazNagyito</code> objektumot.
      *
      * @param      a              a [a,b]x[c,d] tartomány a koordinátája.
      * @param      b              a [a,b]x[c,d] tartomány b koordinátája.
@@ -28,7 +28,7 @@ public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
      * @param      szélesség      a halmazt tartalmazó tömb szélessége.
      * @param      iterációsHatár a számítás pontossága.
      */
-    public MandelbrotHalmazNagyító(double a, double b, double c, double d,
+    public MandelbrotHalmazNagyito(double a, double b, double c, double d,
             int szélesség, int iterációsHatár) {
         // Az ős osztály konstruktorának hívása
         super(a, b, c, d, szélesség, iterációsHatár);
@@ -49,19 +49,19 @@ public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
             // Ha felengedjük, akkor a kijelölt terület
             // újraszámítása indul:
             public void mouseReleased(java.awt.event.MouseEvent m) {
-                double dx = (MandelbrotHalmazNagyító.this.b
-                        - MandelbrotHalmazNagyító.this.a)
-                        /MandelbrotHalmazNagyító.this.szélesség;
-                double dy = (MandelbrotHalmazNagyító.this.d
-                        - MandelbrotHalmazNagyító.this.c)
-                        /MandelbrotHalmazNagyító.this.magasság;
+                double dx = (MandelbrotHalmazNagyito.this.b
+                        - MandelbrotHalmazNagyito.this.a)
+                        /MandelbrotHalmazNagyito.this.szélesség;
+                double dy = (MandelbrotHalmazNagyito.this.d
+                        - MandelbrotHalmazNagyito.this.c)
+                        /MandelbrotHalmazNagyito.this.magasság;
                 // Az új Mandelbrot nagyító objektum elkészítése:
-                new MandelbrotHalmazNagyító(MandelbrotHalmazNagyító.this.a+x*dx,
-                        MandelbrotHalmazNagyító.this.a+x*dx+mx*dx,
-                        MandelbrotHalmazNagyító.this.d-y*dy-my*dy,
-                        MandelbrotHalmazNagyító.this.d-y*dy,
+                new MandelbrotHalmazNagyito(MandelbrotHalmazNagyito.this.a+x*dx,
+                        MandelbrotHalmazNagyito.this.a+x*dx+mx*dx,
+                        MandelbrotHalmazNagyito.this.d-y*dy-my*dy,
+                        MandelbrotHalmazNagyito.this.d-y*dy,
                         600,
-                        MandelbrotHalmazNagyító.this.iterációsHatár);
+                        MandelbrotHalmazNagyito.this.iterációsHatár);
             }
         });
         // Egér mozgás események feldolgozása:
@@ -145,6 +145,6 @@ public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
         // A kiinduló halmazt a komplex sík [-2.0, .7]x[-1.35, 1.35]
         // tartományában keressük egy 600x600-as hálóval és az
         // aktuális nagyítási pontossággal:
-        new MandelbrotHalmazNagyító(-2.0, .7, -1.35, 1.35, 600, 255);
+        new MandelbrotHalmazNagyito(-2.0, .7, -1.35, 1.35, 600, 255);
     }
 }         

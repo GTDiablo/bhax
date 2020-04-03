@@ -245,17 +245,7 @@ main (int argc, char **argv)
             a kulcsban következik, majd a kulcson belül is továbblép a következő karakterre (ha a kulcs 4 karakter akkor 
             sorban mindig azon a 4 karakteren megy végig). Ezért játszik fontos szerepet a kulcs, mivel anélkül nem  
             tudjuk feltörni a titkosított szöveget.
-        </para>
-        <para>
-            A program mülködését laboron kipróbáltuk, csoportban dolgozva átírtuk a Tanár Úr által kért kulcs karakterekre,
-            majd az UDPROG Facebook csoportba posztoltuk és küldtük be a válaszokat. 
-        </para>
-        <para>
-            Ebben a feladatban a következő személyek voltak a Tutoriáltjaim: 
-            Imre Dalma (<link xlink:href="https://gitlab.com/imdal/bhax">https://gitlab.com/imdal/bhax</link>), 
-            Fürjes-Benke Péter (<link xlink:href="https://gitlab.com/fupn26/bhax">https://gitlab.com/fupn26/bhax</link>). 
-            Illetve Tutorom volt: Imre Dalma, Fürjes-Benke Péter.
-        </para>            
+        </para>        
     </section>
            
     <section>

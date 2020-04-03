@@ -30,6 +30,8 @@
 #define MERET 600
 #define ITER_HAT 32000
 
+// f(z) = Z^2+c
+
 void
 mandel (int kepadat[MERET][MERET]) {
 
