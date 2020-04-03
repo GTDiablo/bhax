@@ -13,7 +13,9 @@
             párost használó C programot, amely helyet foglal
             egy alsó háromszög mátrixnak a szabad tárban!
         </para>
+        
         <para>
+            Saját videó: <link xlink:href="https://youtu.be/kvvCyCXoqDw">https://youtu.be/kvvCyCXoqDw</link>,
             Megoldás videó: <link xlink:href="https://youtu.be/1MRTuKwRsB0">https://youtu.be/1MRTuKwRsB0</link>,
             <link xlink:href="https://youtu.be/RKbX5-EWpzA">https://youtu.be/RKbX5-EWpzA</link>.
         </para>
@@ -177,10 +179,10 @@ main ()
             Írj egy EXOR titkosítót C-ben!
         </para>
         <para>
-            Megoldás videó:
+            Megoldás videó: <link xlink:href="https://youtu.be/-c9LCvTilLY">https://youtu.be/-c9LCvTilLY</link>
         </para>
         <para>
-            Megoldás forrása:                
+            Megoldás forrása:    <link xlink:href="Forraskodok/Caesar/4.2/e.c">../Forraskodok/Caesar/4.2/e.c</link>            
         </para>
         <para> 
             A forráskód megtalálható a következő linken is: <link xlink:href="Forraskodok/Caesar/4.2/e.c">../Forraskodok/Caesar/4.2/e.c</link>   
@@ -254,7 +256,7 @@ main (int argc, char **argv)
             Írj egy EXOR titkosítót Java-ban!
         </para>
         <para>
-            Megoldás videó:
+            Megoldás videó: <link xlink:href="https://youtu.be/13SkbYOrxWQ">https://youtu.be/13SkbYOrxWQ </link>
         </para>
         <para>
             Megoldás forrása: <link xlink:href="https://www.tankonyvtar.hu/hu/tartalom/tkt/javat-tanitok-javat/ch01.html#exor_titkosito">https://www.tankonyvtar.hu/hu/tartalom/tkt/javat-tanitok-javat/ch01.html#exor_titkosito</link>               
