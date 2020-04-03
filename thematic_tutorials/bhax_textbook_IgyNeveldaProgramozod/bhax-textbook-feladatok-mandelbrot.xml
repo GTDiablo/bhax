@@ -1118,7 +1118,7 @@ public class MandelbrotHalmazNagyító extends MandelbrotHalmaz {
         </para>
 
         <para>
-            Megoldás videó: <link xlink:href="">Még nincs</link>
+            Megoldás videó: <link xlink:href="https://youtu.be/jANUVqiq7Cc">Megoldás videó</link>
         </para>
         <para>
             Megoldás forrása: <link xlink:href="Forraskodok/Mandelbrot/5.7/m_lava.py"> <filename>bhax/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Forraskodok/Mandelbrot/lava_fel_le.py</filename></link>, <link xlink:href="https://github.com/nbatfai/RedFlowerHell">https://github.com/nbatfai/RedFlowerHell</link>               

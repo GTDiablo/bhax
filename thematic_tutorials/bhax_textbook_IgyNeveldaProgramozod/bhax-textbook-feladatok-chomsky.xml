@@ -356,10 +356,6 @@ main ()
             Megoldás forrása: <link xlink:href="https://gitlab.com/nbatfai/bhax/blob/master/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Chomsky/l337d1c7.l">../nbatfai/bhax/blob/master/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Chomsky/l337d1c7.l</link>  
         </para>
         <para>
-            A feladatban Tutorom volt Zabiák Edina. A repója a következő linken érhető el: 
-            <link xlink:href="https://gitlab.com/edi.zabi/bhax">https://gitlab.com/edi.zabi/bhax</link> 
-        </para>
-        <para>
             A Leet egy egyfajta al-abcje az angol nyelvnek, amit legtöbbször az internetes fórumokon, játékokban, tehát többnyire 
             az informatika területén használják. A l33t a latin abc betűit, az ascii karakterek kombinációira cseréli fel, így 
             létrejönnek az érdekesebbnél érdekesebb, furcsa, de ötletes átírások, megnevezések. 
@@ -618,9 +614,6 @@ main()
         <para>
             Hogyan olvasod természetes nyelven az alábbi Ar nyelvű formulákat?
         </para>
-        <para>
-            A feladatban Horváth Gyulának voltam a tutora.
-        </para>
         <programlisting language="tex">
 <![CDATA[$(\forall x \exists y ((x<y)\wedge(y \text{ prím})))$]]>
         </programlisting> 
@@ -718,7 +711,7 @@ main()
             Írj olyan Minecraft MALMÖ python programot, amivel Steve csigavonalban járja be a pályát a diszkrét mozgási parancsok felhasználásával.
         </para>
         <para>
-            Megoldás videó: <link xlink:href="">Megoldás</link>
+            Megoldás videó: <link xlink:href="https://www.youtube.com/watch?v=LbB8L4o0mGo">Megoldó videó</link>
         </para>
         <para>
             Megoldás forrása: <link xlink:href="Forraskodok/Chomsky/csiga_diszkret.py">

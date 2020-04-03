@@ -731,7 +731,7 @@ return -1;
             </mediaobject>
         </figure>
         <para>
-            Ahogy a csatolt képen is látszik végeredményül 538-at kaptam, ami annyit jelent, hogy az én gépem 1 másodperc alatt 538 millió 
+            Ahogy a csatolt képen is látszik végeredményül 1086-at kaptam, ami annyit jelent, hogy az én gépem 1 másodperc alatt 1086 millió 
             utasítást tud végrehajtani.  
         </para>
         
@@ -1333,7 +1333,7 @@ plot(x,y,type="b")]]>
             Írj olyan Minecraft MALMÖ python programot, amivel Steve csigavonalban járja be a pályát a folytonos mozgási parancsok felhasználásával.
         </para>
         <para>
-            Megoldás videó: <link xlink:href=""></link>
+            Megoldás videó: <link xlink:href="https://www.youtube.com/watch?v=9Pk-qoStK34">Saját megoldás</link>
         </para>
         <para>
             Megoldás forrása: <link xlink:href="Forraskodok/Turing/csiga_folytonos.py">

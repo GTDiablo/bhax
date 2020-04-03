@@ -22,9 +22,6 @@
                 <filename>nbatfai/bhax/thematic_tutorials/bhax_textbook_IgyNeveldaProgramozod/Caesar/tm.c</filename>
             </link> 
         </para>
-        <para>
-            A feladatban tutora voltam Stiegelmayer Máténak.
-        </para>
         <para> 
             A forráskód megtalálható a következő linken is: <link xlink:href="Forraskodok/Caesar/4.1/tm.c">../Forraskodok/Caesar/4.1/tm.c</link>   
         </para> 
@@ -859,7 +856,7 @@ int main (int argc, char **argv)
             Írj olyan Minecraft MALMÖ python programot, ami kiírja, hogy Steve milyen blokkokat érzékel maga előtt!
         </para>
         <para>
-            Megoldás videó: <link xlink:href="">link</link>
+            Megoldás videó: <link xlink:href="https://youtu.be/7_KLcSkaOME">Megoldó videó</link>
         </para>
         <para>
             Megoldás forrása: <link xlink:href="Forraskodok/Caesar/mitlatsteve.py">
