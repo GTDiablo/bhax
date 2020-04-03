@@ -747,7 +747,7 @@ return -1;
             értékét!
         </para>
         <para>
-            Megoldás videó: <link xlink:href=""></link>
+            Megoldás videó: <link xlink:href="https://youtu.be/PZ5mnm4XAWM">https://youtu.be/PZ5mnm4XAWM</link>
         </para>
         <para>
             Megoldás forrása: <link xlink:href=""></link>
@@ -937,10 +937,10 @@ pagerank(double T[4][4]){
             Írj R szimulációt a Monty Hall problémára!
         </para>
         <para>
-            Megoldás videó: <link xlink:href="https://bhaxor.blog.hu/2019/01/03/erdos_pal_mit_keresett_a_nagykonyvben_a_monty_hall-paradoxon_kapcsan">https://bhaxor.blog.hu/2019/01/03/erdos_pal_mit_keresett_a_nagykonyvben_a_monty_hall-paradoxon_kapcsan</link>
+            Megoldás videó: <link xlink:href="">https://bhaxor.blog.hu/2019/01/03/erdos_pal_mit_keresett_a_nagykonyvben_a_monty_hall-paradoxon_kapcsan</link>
         </para>
         <para>
-            Megoldás forrása: <link xlink:href="https://gitlab.com/nbatfai/bhax/tree/master/attention_raising/MontyHall_R">https://gitlab.com/nbatfai/bhax/tree/master/attention_raising/MontyHall_R</link>
+            Megoldás forrása: <link xlink:href="https://bhaxor.blog.hu/2019/01/03/erdos_pal_mit_keresett_a_nagykonyvben_a_monty_hall-paradoxon_kapcsan">https://bhaxor.blog.hu/2019/01/03/erdos_pal_mit_keresett_a_nagykonyvben_a_monty_hall-paradoxon_kapcsan</link>
         </para>
         <para>
             A Monty Hall probléma alapja három ajtó, mely mindegyike rejt valamit: két ajtó mögött egy-egy roncs autó van, egy ajtó mögött pedig egy
