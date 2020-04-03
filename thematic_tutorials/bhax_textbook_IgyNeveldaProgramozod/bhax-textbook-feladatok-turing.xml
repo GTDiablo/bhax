@@ -13,11 +13,11 @@
             100 százalékban minden magot!
         </para>
         <para>
-            Megoldás videó:
+        Szerintem a kód és amit csinál nagyon egyértelmű volt és reészletesen is dokumentáltam a könyvben, ezért egyéb alámondást nem igényel a videó.
         </para>
         <para>
-            Megoldás forrása:    
-        </para> 
+            Megoldás videó: <link xlink:href="https://youtu.be/GoR2cJ9vzZc">https://youtu.be/GoR2cJ9vzZc</link>
+        </para>
         <para>
             C végtelen ciklus, mely 0 százalékban dolgoztat egy magot.
         </para>
@@ -285,10 +285,13 @@ false]]></screen>
             nasználata nélkül!
         </para>
         <para>
-            Megoldás videó: <link xlink:href="https://bhaxor.blog.hu/2018/08/28/10_begin_goto_20_avagy_elindulunk">https://bhaxor.blog.hu/2018/08/28/10_begin_goto_20_avagy_elindulunk</link>
+        Szerintem a kód és amit csinál nagyon egyértelmű volt és reészletesen is dokumentáltam a könyvben, ezért egyéb alámondást nem igényel a videó.
         </para>
         <para>
-            Megoldás forrása:  
+            Megoldás videó: <link xlink:href="https://youtu.be/f23nJjxGl7k">https://youtu.be/f23nJjxGl7k</link>
+        </para>
+        <para>
+            Megoldás forrása:   <link xlink:href="https://bhaxor.blog.hu/2018/08/28/10_begin_goto_20_avagy_elindulunk">https://bhaxor.blog.hu/2018/08/28/10_begin_goto_20_avagy_elindulunk</link>
         </para>
         <para>
             Ezt a feladatot háromféle példával fogom illusztrálni (egyikben sem használva segédváltozót).
@@ -420,7 +423,7 @@ int main()
             pattogtatás alatt, alább láthatod a videókon.)
         </para>
         <para>
-            Megoldás videó: <link xlink:href="https://bhaxor.blog.hu/2018/08/28/labdapattogas">https://bhaxor.blog.hu/2018/08/28/labdapattogas</link>
+            Megoldás videó: <link xlink:href="https://youtu.be/qHB1u2OdSxY">https://youtu.be/qHB1u2OdSxY</link>
         </para>
         <para>
             Megoldás forrása: <link xlink:href="https://bhaxor.blog.hu/2018/08/28/labdapattogas">https://bhaxor.blog.hu/2018/08/28/labdapattogas</link>
