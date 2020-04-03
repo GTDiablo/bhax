@@ -937,7 +937,7 @@ pagerank(double T[4][4]){
             Írj R szimulációt a Monty Hall problémára!
         </para>
         <para>
-            Megoldás videó: <link xlink:href="">https://bhaxor.blog.hu/2019/01/03/erdos_pal_mit_keresett_a_nagykonyvben_a_monty_hall-paradoxon_kapcsan</link>
+            Megoldás videó: <link xlink:href="https://youtu.be/Rj8qOjE0gYc">https://youtu.be/Rj8qOjE0gYc</link>
         </para>
         <para>
             Megoldás forrása: <link xlink:href="https://bhaxor.blog.hu/2019/01/03/erdos_pal_mit_keresett_a_nagykonyvben_a_monty_hall-paradoxon_kapcsan">https://bhaxor.blog.hu/2019/01/03/erdos_pal_mit_keresett_a_nagykonyvben_a_monty_hall-paradoxon_kapcsan</link>
@@ -1071,6 +1071,10 @@ for (i in 1:kiserletek_szama) {
         <title>100 éves a Brun tétel</title>
         <para>
             Írj R szimulációt a Brun tétel demonstrálására!
+        </para>
+        
+        <para>
+            Megoldás videó: <link xlink:href="https://youtu.be/Tl7zPmllhY0">https://youtu.be/Tl7zPmllhY0</link> Saját megoldás
         </para>
         <para>
             Megoldás videó: <link xlink:href="https://youtu.be/xbYhp9G6VqQ">https://youtu.be/xbYhp9G6VqQ</link>
